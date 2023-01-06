@@ -7,3 +7,18 @@ eureka:
   client:
     registerWithEureka: false 	#Este microservicio no se registra en el Discovery Server
     fetchRegistry: false		#Este microservicio no puede obtener información del Discovery Server
+
+# ACTUATOR - PROMETHEUS
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: [ "health","prometheus", "metrics" ]
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
