@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: discovery-server		#Nombre de este microservicio
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false 	#Este microservicio no se registra en el Discovery Server
+    fetchRegistry: false		#Este microservicio no puede obtener información del Discovery Server
